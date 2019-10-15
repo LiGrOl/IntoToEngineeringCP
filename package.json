@@ -1,0 +1,10 @@
+{
+  "name": "ite_cp",
+  "version": "1.0.0",
+  "description": "Introduction to engineering. Course project",
+  "main": "app.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Litvinov Grygoriy (LiGrOl)"
+}
