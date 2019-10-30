@@ -1,12 +1,16 @@
 const fs = require("fs");                                                   // Including FS function for reading data from file
 
-const data = fs.readFileSync("text.txt", "utf8");                           // Reading from text.txt
+let data = fs.readFileSync("text.txt", "utf8");                             // Reading from text.txt
 
 const validArr = validateArr(data);                                         // Calling validateArr function for validated data from text.txt
 
 const sortedArr = bubbleSorting(validArr);                                  // Calling bubbleSorting function for sorting of validated array
 
-console.log(sortedArr);                                                     // Output result of sorting to console
+fs.writeFileSync("text.txt", sortedArr);                                    // Writing data to the text.txt
+
+data = fs.readFileSync("text.txt", "utf8");                                 // Reading from text.txt
+
+console.log("Результат сортировки: " + sortedArr);
 
 // Validation of initial data
 function validateArr(str) {
